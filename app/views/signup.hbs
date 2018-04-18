@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS Signup</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body style="background-color:rgba(12,81,60,0.64);">
+  <div>
+    <div class="container">
+      <div class="row" style="margin-bottom:10px;margin-top:10px;">
+        <div class="col">
+          <div class="card" style="width:519px;display:block;margin-left:auto;margin-right:auto;">
+            <div class="card-body" style="padding:0;padding-top:0px;">
+              <img src="img/cs_banner.png" style="height:177px;width:515px;border:0px solid rgba(0,0,0,.125);border-radius:19px;padding-top:0px;margin-bottom:0px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="container">
+      <div class="row-signup" style="margin-bottom:10px;margin-top:15px;">
+        <div class="card">
+          <div class="card-header" style="  background-color:rgba(8,74,57,0.88);  border-radius:8px 8px 0 0;  margin-left:0px;  margin-bottom:-8px;">
+            <h5 class="mb-0" style="  color:rgb(254,255,255);  text-shadow:2px 2px 4px #000000;">Owner/Sitter Signup</h5>
+          </div>
+          <div class="card-body" style="  padding-top:5px;  padding-bottom:5px;  padding-left:5px;  padding-right:5px;">
+            <div>
+              <div class="container-fluid">
+                <form id="signup" name="signup" method="post" action="/signup" style="margin-right:-3px;">
+                  <div class="form-row">
+                    <div class="col-md-6">
+                      <div id="successfail"></div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-12 col-md-12" id="message" style="  padding-left:2px;  padding-right:9px;">
+                      <h2 class="h4" style="  padding-left:0px;  margin-left:-6px;  margin-bottom:2px;">
+                        <small>
+                          <small class="required-input">(*Required Field)</small>
+                        </small>
+                      </h2>
+                      <div class="form-group" style="margin-bottom:5px;">
+                        <label for="firstname" style="margin-bottom:2px;">First Name</label>
+                        <span class="required-input">*</span>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="fa fa-user-o"></i>
+                            </span>
+                          </div>
+                          <input type="text" name="firstname" required placeholder="First Name" class="form-control" id="from-name" />
+                        </div>
+                      </div>
+                      <div class="form-group" style="margin-bottom:5px;">
+                        <label for="lastname" style="margin-bottom:2px;">Last Name</label>
+                        <span class="required-input">*</span>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="fa fa-user-o"></i>
+                            </span>
+                          </div>
+                          <input type="text" name="lastname" required placeholder="Last Name" class="form-control" id="lastname" />
+                        </div>
+                      </div>
+                      <div class="form-group" style="  margin-bottom:2px;">
+                        <label for="from-email" style="  margin-bottom:2px;">Email</label>
+                        <span class="required-input">*</span>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="fa fa-envelope-o"></i>
+                            </span>
+                          </div>
+                          <input type="email" name="email" required placeholder="Email Address" class="form-control" id="from-email" />
+                        </div>
+                      </div>
+                      <div class="form-group" style="margin-bottom:2px;">
+                        <label for="password" style="margin-bottom:2px;">Password</label>
+                        <span class="required-input">*</span>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="fa fa-key"></i>
+                            </span>
+                          </div>
+                          <input type="password" name="password" required placeholder="Password" class="form-control" id="password" />
+                        </div>
+                      </div>
+                      <div class="form-group" style="margin-bottom:5px;">
+                        <label for="from-email" style="margin-bottom:2px;">Address</label>
+                        <span class="required-input">*</span>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="fa fa-map-marker"></i>
+                            </span>
+                          </div>
+                          <input type="text" name="address" required placeholder="Address" class="form-control" id="address" />
+                        </div>
+                      </div>
+                      <div class="form-group" style="margin-bottom:5px;">
+                        <label for="from-email" style="margin-bottom:2px;">Lateral Coordinate</label>
+                        <span class="required-input">*</span>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="fa fa-map-marker"></i>
+                            </span>
+                          </div>
+                          <input type="text" name="lat" id="lat" readonly required class="form-control"/>
+                        </div>
+                      </div>
+                      <div class="form-group" style="margin-bottom:5px;">
+                        <label for="from-email" style="margin-bottom:2px;">Longitude Coordinate</label>
+                        <span class="required-input">*</span>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="fa fa-map-marker"></i>
+                            </span>
+                          </div>
+                          <input type="text" name="lng" id="lng" readonly required class="form-control"/>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="from-calltime" style="  margin-bottom:2px;">Owner or Sitter*</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend"></div>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                <i class="fa fa-user"></i>
+                              </span>
+                            </div>
+                            <select id="isSitter" name="isSitter" class="form-control">
+                              <option value="0">Owner</option>
+                              <option value="1">Sitter</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="animalTypes" style="display: none;">
+                        <div class="form-group">
+                          <h4 class="text-center">Animals you plan to sit</h4>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" value="1" name="handlesDogs" id="handlesDogs">
+                            <label class="form-check-label" for="handlesDogs">Dogs</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" value="1" name="handlesCats" id="handlesCats">
+                            <label class="form-check-label" for="handlesCats">Cats</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" value="1" name="handlesBirds" id="handlesBirds">
+                            <label class="form-check-label" for="handlesBirds">Birds</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" value="1" name="handlesReptiles" id="handlesReptiles">
+                            <label class="form-check-label" for="handlesReptiles">Reptiles</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="form-row">
+                          <button class="btn btn-primary btn-block" type="reset" style="background-color:rgba(8,74,57,0.88); margin-top:25px;">Reset
+                            <i class="fa fa-undo"></i>
+                          </button>
+                          <button class="btn btn-primary btn-block" type="submit" value="Sign Up" style="background-color:rgba(8,74,57,0.88);">Submit
+                            <i class="fa fa-chevron-circle-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQLyMdy3_sNUDwMhTNBF0AM8iR_cIng4c&libraries=places&callback=initAC"
+        async defer></script>
+    <script src="js/signUp.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CS Search</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="fonts/font-awesome.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+</head>
+
+<body>
+
+	<body style="background-color:rgba(12,81,60,0.64);">
+		<div>
+			<div class="container">
+				<div class="row" style="margin-bottom:10px;margin-top:10px;">
+					<div class="col">
+						<div class="card" style="width:519px;display:block;margin-left:auto;margin-right:auto;">
+							<div class="card-body" style="padding:0;padding-top:0px;">
+								<img src="img/cs_banner.png" style="background-image:url(&quot;img/cs_banner.png&quot;);height:177px;width:515px;border:0px solid rgba(0,0,0,.125);border-radius:19px;padding-top:0px;margin-bottom:0px;">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="container">
+				<div class="row" style="margin-bottom:15px;margin-top:10px;">
+					<div class="col">
+						<div class="card">
+							<div class="card-header" style="background-color:rgba(8,74,57,0.88);border-radius:8px 8px 0 0;margin-left:0px;">
+								<h5 class="mb-0" style="color:rgb(254,255,255);text-shadow:2px 2px 4px #000000;">Pet Sitter Map Results</h5>
+							</div>
+							<div class="card-body" style="padding:0;padding-bottom:0px;">
+								<div id="map" style="border-radius:0 0 9px 9px"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div>
+			<div class="container">
+				<div class="row" style="margin-bottom:15px;margin-top:10px;">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header" style="background-color:rgba(8,74,57,0.88);border-radius:8px 8px 0 0;margin-left:0px;">
+								<h5 class="mb-0" style="color:rgb(254,255,255);text-shadow:2px 2px 4px #000000;">Pet Sitter Results</h5>
+							</div>
+							<div class="table-responsive" style="padding-left:20px;padding-right:20px;">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>ID</th>
+											<th>Name</th>
+											<th>Email Address</th>
+											<th>Dogs</th>
+											<th>Cats</th>
+											<th>Birds</th>
+											<th>Reptiles</th>
+										</tr>
+									</thead>
+									<tbody id="search-results-table">
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/search.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-marker-clusterer/1.0.0/markerclusterer_compiled.js">
+    	</script>
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQLyMdy3_sNUDwMhTNBF0AM8iR_cIng4c&callback=initMap">
+		</script>
+	</body>
+
+</html>

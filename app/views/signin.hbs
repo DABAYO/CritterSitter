@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS Signin</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body style="background-color:rgba(12,81,60,0.64);">
+    <div>
+    <div class="container">
+      <div class="row" style="margin-bottom:10px;margin-top:10px;">
+        <div class="col">
+          <div class="card" style="width:519px;display:block;margin-left:auto;margin-right:auto;">
+            <div class="card-body" style="padding:0;padding-top:0px;">
+              <img src="img/cs_banner.png" style="height:177px;width:515px;border:0px solid rgba(0,0,0,.125);border-radius:19px;padding-top:0px;margin-bottom:0px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+      <div class="row-signin" style="margin-bottom:10px;margin-top:15px;">
+        <div class="card">
+          <div class="card-header" style="  background-color:rgba(8,74,57,0.88);  border-radius:8px 8px 0 0;  margin-left:0px;  margin-bottom:-8px;">
+            <h5 class="mb-0" style="  color:rgb(254,255,255);  text-shadow:2px 2px 4px #000000;">Signin</h5>
+          </div>
+          <div class="card-body" style="  padding-top:5px;  padding-bottom:5px;  padding-left:5px;  padding-right:5px;">
+            <div>
+              <div class="container-fluid">
+                <form id="signin" name="signin" method="post" action="/signin" style="margin-right:-3px;">
+                  <div class="form-row">
+                    <div class="col-md-6">
+                      <div id="successfail"></div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-12 col-md-12" id="message" style="  padding-left:2px;  padding-right:9px;">
+                      <div class="form-group" style="margin-bottom:2px;">
+                        <label for="from-email" style="margin-bottom:2px; margin-top: 15px;">Email</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="fa fa-envelope-o"></i>
+                            </span>
+                          </div>
+                          <input type="email" name="email" required placeholder="Email Address" class="form-control" id="from-email" />
+                        </div>
+                      </div>
+                      <div class="form-group" style="margin-bottom:2px;">
+                        <label for="password" style="margin-bottom:2px;">Password</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="fa fa-key"></i>
+                            </span>
+                          </div>
+                          <input type="password" name="password" required placeholder="Password" class="form-control" id="password" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="form-row">
+                          <button class="btn btn-primary btn-block" type="reset" style="background-color:rgba(8,74,57,0.88); margin-top:25px;">Reset
+                            <i class="fa fa-undo"></i>
+                          </button>
+                          <button class="btn btn-primary btn-block" type="submit" value="Sign In" style="background-color:rgba(8,74,57,0.88);">Submit
+                            <i class="fa fa-chevron-circle-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
